@@ -1,0 +1,12 @@
+{
+  "name": "sampoyigi/gtpay",
+  "type": "igniter-extension",
+  "require": {
+    "davidumoh/omnipay-gtpay": "^0.2"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
