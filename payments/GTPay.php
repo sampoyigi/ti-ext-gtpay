@@ -52,7 +52,7 @@ class GTPay extends BasePaymentGateway
      * @param \Admin\Models\Orders_model $order
      *
      * @return bool|\Illuminate\Http\RedirectResponse
-     * @throws \ApplicationException
+     * @throws \Igniter\Flame\Exception\ApplicationException
      */
     public function processPaymentForm($data, $host, $order)
     {
