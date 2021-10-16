@@ -1,6 +1,6 @@
 {
   "name": "sampoyigi/gtpay",
-  "type": "igniter-extension",
+  "type": "tastyigniter-extension",
   "require": {
     "davidumoh/omnipay-gtpay": "^0.2"
   },
