@@ -1,7 +1,5 @@
 <?php namespace SamPoyigi\GTPay;
 
-use Admin\Facades\AdminAuth;
-use Illuminate\Foundation\AliasLoader;
 use System\Classes\BaseExtension;
 
 /**
@@ -27,7 +25,7 @@ class Extension extends BaseExtension
     public function registerPaymentGateways()
     {
         return [
-            'SamPoyigi\GTPay\Payments\GTPay' => [
+            \SamPoyigi\GTPay\Payments\GTPay::class => [
                 'code' => 'gtpay',
                 'name' => 'GTPay Payment',
                 'description' => 'Accept credit card payments using GTPay',
