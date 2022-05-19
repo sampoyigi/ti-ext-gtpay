@@ -1,6 +1,6 @@
 <?php namespace SamPoyigi\GTPay;
 
-use System\Classes\BaseExtension;
+use Igniter\System\Classes\BaseExtension;
 
 /**
  * GTPay Extension Information File

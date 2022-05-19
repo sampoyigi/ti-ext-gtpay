@@ -2,8 +2,8 @@
 
 namespace SamPoyigi\GTPay\Payments;
 
-use Admin\Classes\BasePaymentGateway;
 use Exception;
+use Igniter\Admin\Classes\BasePaymentGateway;
 use Igniter\Flame\Exception\ApplicationException;
 use Igniter\PayRegister\Traits\PaymentHelpers;
 use Illuminate\Support\Facades\Redirect;
@@ -48,8 +48,8 @@ class GTPay extends BasePaymentGateway
      * Processes payment using passed data.
      *
      * @param array $data
-     * @param \Admin\Models\Payments_model $host
-     * @param \Admin\Models\Orders_model $order
+     * @param \Igniter\Admin\Models\Payment $host
+     * @param \Igniter\Admin\Models\Order $order
      *
      * @return bool|\Illuminate\Http\RedirectResponse
      * @throws \Igniter\Flame\Exception\ApplicationException
