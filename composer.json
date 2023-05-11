@@ -1,12 +1,25 @@
 {
-  "name": "sampoyigi/gtpay",
-  "type": "tastyigniter-extension",
-  "require": {
-    "davidumoh/omnipay-gtpay": "^0.2"
-  },
-  "config": {
-    "preferred-install": "dist"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+	"name": "sampoyigi/gtpay",
+	"type": "tastyigniter-extension",
+	"require": {
+		"davidumoh/omnipay-gtpay": "^0.2"
+	},
+	"config": {
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"php-http/discovery": true,
+			"composer/installers": true
+		},
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require-dev": {
+		"laravel/pint": "^1.2",
+		"nunomaduro/larastan": "^2.4.0",
+		"orchestra/testbench": "^8.5",
+		"pestphp/pest-plugin-laravel": "^2.0",
+		"tastyigniter/core": "dev-master"
+	}
 }
