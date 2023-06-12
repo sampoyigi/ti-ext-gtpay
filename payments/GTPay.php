@@ -3,8 +3,8 @@
 namespace SamPoyigi\GTPay\Payments;
 
 use Exception;
-use Igniter\Admin\Classes\BasePaymentGateway;
 use Igniter\Flame\Exception\ApplicationException;
+use Igniter\PayRegister\Classes\BasePaymentGateway;
 use Igniter\PayRegister\Traits\PaymentHelpers;
 use Illuminate\Support\Facades\Redirect;
 use Omnipay\Gtpay\Gateway;
@@ -48,8 +48,8 @@ class GTPay extends BasePaymentGateway
      * Processes payment using passed data.
      *
      * @param array $data
-     * @param \Igniter\Admin\Models\Payment $host
-     * @param \Igniter\Admin\Models\Order $order
+     * @param \Igniter\PayRegister\Models\Payment $host
+     * @param \Igniter\Cart\Models\Order $order
      *
      * @return bool|\Illuminate\Http\RedirectResponse
      * @throws \Igniter\Flame\Exception\ApplicationException
@@ -76,8 +76,7 @@ class GTPay extends BasePaymentGateway
                 return Redirect::to($response->getRedirectUrl());
 
             $this->handlePaymentResponse($response, $order, $host, $fields);
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             $order->logPaymentAttempt('Payment error -> '.$ex->getMessage(), 0, $fields, []);
             throw new ApplicationException('Sorry, there was an error processing your payment. Please try again later.');
         }
