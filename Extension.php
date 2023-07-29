@@ -42,7 +42,7 @@ class Extension extends BaseExtension
     {
         return [
             'SamPoyigi.GTPay.Manage' => [
-                'group' => 'module',
+                'group' => 'admin',
                 'description' => 'Ability to the manage GTPay payment gateway settings',
             ],
         ];
