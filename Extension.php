@@ -7,7 +7,7 @@ use Igniter\System\Classes\BaseExtension;
  */
 class Extension extends BaseExtension
 {
-    public function extensionMeta()
+    public function extensionMeta(): array
     {
         return [
             'name' => 'GTPay for TastyIgniter',
@@ -22,7 +22,7 @@ class Extension extends BaseExtension
     {
     }
 
-    public function registerPaymentGateways()
+    public function registerPaymentGateways(): array
     {
         return [
             \SamPoyigi\GTPay\Payments\GTPay::class => [
@@ -38,7 +38,7 @@ class Extension extends BaseExtension
      *
      * @return array
      */
-    public function registerPermissions()
+    public function registerPermissions(): array
     {
         return [
             'SamPoyigi.GTPay.Manage' => [
